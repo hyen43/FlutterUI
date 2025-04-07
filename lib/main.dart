@@ -7,6 +7,8 @@ void main() {
 
 // 우리 앱의 root widget
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,46 +37,32 @@ class App extends StatelessWidget {
                       ),
                       Text(
                         "Welcome back",
-                        style: TextStyle(
-                          color: Colors.white.withAlpha(125),
-                          fontSize: 22,
-                        ),
+                        style: TextStyle(color: Colors.white.withAlpha(125), fontSize: 22),
                       ),
                     ],
                   ),
                 ],
               )),
-              SizedBox(height: 40),
-              Text(
-                "Total Balance",
-                style: TextStyle(color: Colors.white, fontSize: 30),
-              ),
-              SizedBox(height: 5),
-
+              const SizedBox(height: 40),
+              Text("Total Balance", style: TextStyle(color: Colors.white, fontSize: 30)),
+              const SizedBox(height: 5),
               Text(
                 "\$10,000",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 44,
-                  fontWeight: FontWeight.w800,
-                ),
+                style: TextStyle(color: Colors.white, fontSize: 44, fontWeight: FontWeight.w800),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Button(
-                    text: "Transfer",
-                    bgColor: Colors.amber,
-                    textColor: Colors.black,
-                  ),
-                  Button(
-                    text: "Request",
-                    bgColor: Colors.black,
-                    textColor: Colors.white,
-                  ),
+                  Button(text: "Transfer", bgColor: Colors.amber, textColor: Colors.black),
+                  Button(text: "Request", bgColor: Colors.black, textColor: Colors.white),
                 ],
               ),
+              const SizedBox(height: 30),
+              Row(children: [
+                
+
+              ],),
             ],
           ),
         ),
